@@ -59,7 +59,7 @@ export class LoggedInPageComponent implements OnInit {
     this.sortedName = e.srcElement.innerHTML;
 
     switch (e.srcElement.innerHTML) {
-      case 'name':
+      case 'Name':
         if (!this.sorted) {
           this.notSoredInfoData = this.infoData.slice();
           this.infoData.sort((a: any, b: any) => a.name.localeCompare(b.name));
@@ -73,7 +73,7 @@ export class LoggedInPageComponent implements OnInit {
         }
         break;
 
-      case 'madeDadeline':
+      case 'Deadline':
         if (!this.sorted) {
           this.notSoredInfoData = this.infoData.slice();
           this.infoData.sort(
@@ -89,7 +89,7 @@ export class LoggedInPageComponent implements OnInit {
         }
         break;
 
-      case 'score':
+      case 'Score':
         if (!this.sorted) {
           this.notSoredInfoData = this.infoData.slice();
           this.infoData.sort((a: any, b: any) => b.score - a.score);
@@ -103,7 +103,7 @@ export class LoggedInPageComponent implements OnInit {
         }
         break;
 
-      case 'bugsCount':
+      case 'Bugs':
         if (!this.sorted) {
           this.notSoredInfoData = this.infoData.slice();
           this.infoData.sort((a: any, b: any) => b.bugsCount - a.bugsCount);
@@ -117,7 +117,7 @@ export class LoggedInPageComponent implements OnInit {
         }
         break;
 
-      case 'durationInDays':
+      case 'Days':
         if (!this.sorted) {
           this.notSoredInfoData = this.infoData.slice();
           this.infoData.sort(
