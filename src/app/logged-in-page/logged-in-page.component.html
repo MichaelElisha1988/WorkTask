@@ -1,0 +1,56 @@
+<div class="topbar"></div>
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <div class="container-fluid">
+    <img src="{{ curAccount[0].personalDetails.avatar }}" alt="avatar_Pic" />
+    <div class="navbar-brand">{{ curAccount[0].personalDetails.name }}</div>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav me-auto mb-2 mb-md-0">
+        <li class="nav-item">
+          <div class="nav-link" aria-current="page">
+            {{ curAccount[0].personalDetails.Team }}
+          </div>
+        </li>
+        <li class="nav-item">
+          <div class="nav-link">
+            {{ curAccount[0].personalDetails.joinedAt }}
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <button class="btn btn-alert" (click)="onLogOut()">LOGOUT</button>
+</nav>
+<h4 class="info-avg">Avarage Score {{ avgScore }}</h4>
+<h4 class="info-onDead">{{ onDeadlinepresent }}% Project are Complete</h4>
+
+<h4 class="sorted" *ngIf="sorted">Table Sorted by {{ sortedName }}</h4>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th (click)="sortList($event)" scope="col">name</th>
+      <th (click)="sortList($event)" scope="col">madeDadeline</th>
+      <th (click)="sortList($event)" scope="col">bugsCount</th>
+      <th (click)="sortList($event)" scope="col">durationInDays</th>
+      <th (click)="sortList($event)" scope="col">score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr
+      [ngStyle]="
+        info.score <= 70
+          ? { 'background-color': '#FF6F61' }
+          : { 'background-color': '#88B04B' }
+      "
+      *ngFor="let info of infoData; let i = index"
+    >
+      <th scope="row">{{ i + 1 }}</th>
+      <td>{{ info.name }}</td>
+      <td>{{ info.madeDadeline }}</td>
+      <td>{{ info.bugsCount }}</td>
+      <td>{{ info.durationInDays }}</td>
+      <td>{{ info.score }}</td>
+    </tr>
+  </tbody>
+</table>

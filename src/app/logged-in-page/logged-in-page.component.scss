@@ -1,0 +1,52 @@
+img {
+  height: 5vw;
+  border-radius: 40px;
+  margin-right: 20px;
+}
+.sorted,
+.info-avg,
+.info-onDead {
+  color: #ff6f61;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .table {
+    width: 100%;
+  }
+
+  .info-avg {
+    margin-top: 15vw;
+  }
+
+  .btn {
+    position: absolute;
+    transform: translate(-50%);
+    left: 50%;
+  }
+}
+@media screen and (max-width: 360px) {
+  img {
+    height: 15vw;
+  }
+  .table {
+    display: grid;
+  }
+  thead {
+    display: none;
+  }
+
+  .info-avg {
+    margin-top: 25vw;
+  }
+
+  .info-onDead::after {
+    content: "\a\aTo Sort Please rotate Screen";
+    white-space: pre;
+    color: #6171ff;
+  }
+
+  .btn {
+    position: absolute;
+  }
+}

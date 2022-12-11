@@ -1,0 +1,7 @@
+<div class="login-page">
+  <app-log-in-page *ngIf="!loggedIn"></app-log-in-page>
+</div>
+
+<div class="inner-page">
+  <app-logged-in-page *ngIf="loggedIn"></app-logged-in-page>
+</div>

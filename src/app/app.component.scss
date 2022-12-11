@@ -1,0 +1,42 @@
+.login-page {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  width: 30vw;
+  box-shadow: 10px 5px 15px gray;
+}
+.inner-page {
+  width: 90%;
+  margin-left: 5vw;
+  margin-top: 8vw;
+  box-shadow: 10px 5px 15px gray;
+}
+
+@media screen and (max-width: 768px) {
+  .login-page {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    width: 60vw;
+    box-shadow: 10px 5px 15px gray;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .login-page {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    width: 80vw;
+    box-shadow: 10px 5px 15px gray;
+  }
+  .inner-page {
+    width: 90%;
+    margin-left: 5vw;
+    margin-top: 8vw;
+    box-shadow: 10px 5px 15px gray;
+  }
+}
