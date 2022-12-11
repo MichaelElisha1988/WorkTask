@@ -1,5 +1,5 @@
 <div class="topbar"></div>
-<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+<nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
   <div class="container-fluid">
     <img src="{{ curAccount[0].personalDetails.avatar }}" alt="avatar_Pic" />
     <div class="navbar-brand">{{ curAccount[0].personalDetails.name }}</div>
@@ -18,7 +18,7 @@
       </ul>
     </div>
   </div>
-  <button class="btn btn-alert" (click)="onLogOut()">LOGOUT</button>
+  <button class="btn btn-info" (click)="onLogOut()">LOGOUT</button>
 </nav>
 <h4 class="info-avg">Avarage Score {{ avgScore }}</h4>
 <h4 class="info-onDead">{{ onDeadlinepresent }}% Project are Complete</h4>
