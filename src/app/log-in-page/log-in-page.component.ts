@@ -26,6 +26,11 @@ export class LogInPageComponent implements OnInit {
     else alert('Email or Password not valid');
   }
   onKeyUpPass(e: any) {
+    // let englishAlphabetAndWhiteSpace = /[A-Za-z0-9]/g;
+    // if (!englishAlphabetAndWhiteSpace.test(e.key)) {
+    //   alert('English Letters Only');
+    //   return;
+    // }
     if (e.key === e.key.toUpperCase() && isNaN(e.key)) {
       this.uppperCaseletter = true;
       console.log('upTrue');

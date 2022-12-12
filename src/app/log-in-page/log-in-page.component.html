@@ -8,6 +8,7 @@
   <div class="form-floating mb-3">
     <input
       [(ngModel)]="email"
+      oninput="this.value = this.value.replace(/[א-ת]/g, '')"
       (keyup)="onKeyUpEmail($event)"
       type="email"
       class="form-control"
@@ -20,6 +21,7 @@
     <input
       [(ngModel)]="password"
       (keyup)="onKeyUpPass($event)"
+      oninput="this.value = this.value.replace(/[א-ת]/g, '')"
       type="password"
       class="form-control"
       id="floatingPassword"
